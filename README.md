@@ -1,39 +1,22 @@
-# CafePOS
+# KasirKu — Cafe POS Web
 
-POS web app starter for cafe operations.
+Aplikasi POS web untuk operasional cafe dengan UI modern.
 
-## Scope
-- Cashier POS: product catalog, cart, order notes, discounts, taxes, payment methods
-- Customer QR ordering foundation
-- Kitchen/bar order workflow
-- Inventory & stock movement foundation
-- Staff roles and permissions foundation
-- Receipt customization with store name/logo
-- Sales dashboard and reporting foundation
-- Table/order management foundation
+## Fitur
+- POS kasir dengan pencarian, kategori, keranjang, pajak, diskon dan pembayaran Tunai/QRIS/Transfer/Debit
+- Kelola produk & jasa, HPP, markup, harga jual, SKU/barcode, BOM dan stok
+- Voucher
+- Riwayat transaksi, pencarian, void dan export CSV
+- Laporan penjualan, HPP, laba kotor, margin, transaksi dan stok menipis
+- Preview & cetak struk
+- Upload logo toko untuk sidebar dan struk
+- Backup & restore data
+- Responsive desktop/mobile
+- Customer QR ordering: `customer.html`
+- Kitchen/Bar Display: `kitchen.html`
 
-## Suggested stack
-- Next.js + TypeScript
-- Tailwind CSS
-- PostgreSQL + Prisma
-- Zod
-- Auth.js / role-based access
-- PWA support
-- ESC/POS-ready receipt printing adapter
+## Alur
+Customer QR / Kasir -> Order -> Pembayaran -> Kitchen/Bar -> Stok -> Struk -> Laporan
 
-## Domain flow
-Customer QR / Cashier -> Order -> Payment -> Kitchen/Bar tickets -> Stock deduction -> Receipt -> Reports
-
-## MVP priorities
-1. Products/categories
-2. POS checkout
-3. Order status / kitchen tickets
-4. QR customer order
-5. Receipt
-6. Daily sales report
-7. Inventory
-8. Users/roles
-
-This repository currently contains the product specification and architecture seed.
-
-Customer ordering: `customer.html` · Kitchen display: `kitchen.html`.
+## Catatan
+Versi ini masih menggunakan localStorage browser. Agar kasir, customer QR, dan kitchen dapat tersinkron real-time antar perangkat, tahap berikutnya adalah backend/database bersama.
