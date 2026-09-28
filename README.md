@@ -35,3 +35,5 @@ Customer QR / Cashier -> Order -> Payment -> Kitchen/Bar tickets -> Stock deduct
 8. Users/roles
 
 This repository currently contains the product specification and architecture seed.
+
+Customer ordering: `customer.html` · Kitchen display: `kitchen.html`.
