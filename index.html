@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>CafePOS — Kasir Cafe</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<div class="app">
+<header><div><span class="eyebrow">CAFE OPERATIONS</span><h1>CafePOS</h1></div><div class="header-right"><span id="clock"></span><span class="badge">Kasir Online</span></div></header>
+<nav class="tabs"><button class="tab active" data-view="pos">Kasir</button><button class="tab" data-view="orders">Pesanan</button><button class="tab" data-view="inventory">Stok</button><button class="tab" data-view="reports">Laporan</button><button class="tab" data-view="settings">Pengaturan</button></nav>
+<main>
+<section id="pos" class="view active"><div class="content-grid">
+<div><div class="section-head"><div><h2>Menu</h2><p>Pilih produk untuk membuat transaksi.</p></div><div id="categories" class="chips"></div></div><div id="products" class="product-grid"></div></div>
+<aside class="cart"><div class="section-head"><div><h2>Pesanan</h2><p id="orderNo"></p></div><button id="clearCart" class="ghost">Kosongkan</button></div><div id="cartItems" class="cart-items"></div><div class="summary"><div><span>Subtotal</span><b id="subtotal">Rp0</b></div><div><span>Diskon</span><b id="discount">Rp0</b></div><div><span>Pajak (10%)</span><b id="tax">Rp0</b></div><div class="total"><span>Total</span><strong id="total">Rp0</strong></div></div><div class="checkout"><label>Metode pembayaran<select id="payment"><option>QRIS</option><option>Cash</option><option>Debit</option><option>Credit</option></select></label><label>Catatan<input id="note" placeholder="Contoh: less ice, tanpa gula"></label><button id="checkout" class="primary">Bayar & Cetak Struk</button></div></aside>
+</div></section>
+<section id="orders" class="view"><div class="section-head"><div><h2>Pesanan Hari Ini</h2><p>Monitor order dari kasir dan QR customer.</p></div></div><div id="orderList" class="table-wrap"></div></section>
+<section id="inventory" class="view"><div class="section-head"><div><h2>Inventori</h2><p>Pantau bahan dan produk yang hampir habis.</p></div><button id="restock" class="primary small">+ Stok Masuk</button></div><div id="inventoryList" class="table-wrap"></div></section>
+<section id="reports" class="view"><div class="section-head"><div><h2>Laporan</h2><p>Ringkasan performa operasional.</p></div></div><div id="reportCards" class="metric-grid"></div><div id="topProducts" class="panel"></div></section>
+<section id="settings" class="view"><div class="settings panel"><h2>Pengaturan Toko</h2><p>Identitas yang akan tampil di struk.</p><label>Nama toko<input id="storeName" value="Kopi Senja Cafe"></label><label>Alamat<input id="storeAddress" value="Surabaya, Jawa Timur"></label><label>Footer struk<input id="receiptFooter" value="Terima kasih sudah berkunjung!"></label><button id="saveSettings" class="primary">Simpan Pengaturan</button></div></section>
+</main></div><div id="toast"></div><script src="app.js"></script></body></html>
